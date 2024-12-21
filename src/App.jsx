@@ -46,6 +46,50 @@ function App() {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: "20px",
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          // Add stagger effect for child elements
+          const children = entry.target.querySelectorAll(".stagger-animation");
+          children.forEach((child, index) => {
+            child.style.transitionDelay = `${index * 0.1}s`;
+            child.classList.add("visible");
+          });
+        }
+      });
+    }, observerOptions);
+
+    // Target elements for animation
+    const elements = document.querySelectorAll(`
+      .tools-heading, 
+      .tools-text, 
+      .card, 
+      .project-btn, 
+      .call, 
+      .btn, 
+      .view-web,
+      .hero-heading,
+      .hero-text,
+      .badge,
+      .social-icon,
+      .contactDetails
+    `);
+
+    elements.forEach((el) => {
+      el.classList.add("animate-on-scroll");
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <nav className="navbar navbar-expand-lg sticky-top pt-4 mb-4">
@@ -406,7 +450,7 @@ function App() {
           <div className="d-flex justify-content-between align-items-center">
             {/* Logo */}
             <div>
-              <a href="/">
+              <a href="#hero">
               <img src={logo} alt="Piyush Goyal" className="footer-logo" /></a>
             </div>
 

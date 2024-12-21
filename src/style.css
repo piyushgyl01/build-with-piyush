@@ -346,3 +346,292 @@ body {
     font-size: 2.6rem;
   }
 }
+
+/* Sophisticated Animation Keyframes */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(135, 113, 237, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(135, 113, 237, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(135, 113, 237, 0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Enhanced Button Animations */
+.call {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background-size: 200% 200%;
+  animation: gradientFlow 8s ease infinite;
+}
+
+.call:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(135, 113, 237, 0.2);
+}
+
+.call::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(135, 113, 237, 0.2),
+    transparent
+  );
+  transition: 0.8s;
+}
+
+.call:hover::before {
+  left: 100%;
+}
+
+/* Project Cards Enhanced Animation */
+.card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.card:hover {
+  transform: translateY(-10px) rotateX(3deg);
+  box-shadow: 0 20px 40px rgba(135, 113, 237, 0.1),
+    0 15px 20px rgba(135, 113, 237, 0.1);
+}
+
+.card img {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Navigation Links Enhanced */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, #6549e9, #c8a6eb);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Technology Badge Enhanced */
+.badge {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(135, 113, 237, 0.1),
+    rgba(135, 113, 237, 0.2),
+    rgba(135, 113, 237, 0.1)
+  ) !important;
+  background-size: 200% 100% !important;
+  animation: shimmer 3s infinite;
+}
+
+.badge:hover {
+  transform: translateY(-2px) scale(1.05);
+  animation: pulseGlow 1.5s infinite;
+}
+
+/* Hero Section Enhanced */
+.hero-img {
+  animation: floatAnimation 6s ease-in-out infinite;
+}
+
+/* Project Buttons Enhanced */
+.project-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(135, 113, 237, 0.1) 0%,
+    transparent 70%
+  );
+  transform: scale(0);
+  transition: transform 0.6s ease-out;
+}
+
+.project-btn:hover::after {
+  transform: scale(1);
+}
+
+/* Social Icons Enhanced */
+.social-icon {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon:hover {
+  transform: translateY(-3px) scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Contact Section Enhanced */
+.contactDetails {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.contactDetails::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #6549e9, transparent);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.contactDetails:hover {
+  transform: translateX(5px);
+}
+
+.contactDetails:hover::after {
+  transform: scaleX(1);
+}
+
+/* Scroll Animation Enhancement */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Page Load Animation for all main sections */
+@keyframes slideUpFade {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Add these animations to your existing sections */
+nav,
+.hero-section,
+#myStack,
+#projectSection,
+#contactSection,
+footer {
+  opacity: 0;
+  animation: slideUpFade 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Stagger the animations for each section */
+nav {
+  animation-delay: 0.1s;
+}
+
+.hero-section {
+  animation-delay: 0.3s;
+}
+
+#myStack {
+  animation-delay: 0.5s;
+}
+
+#projectSection {
+  animation-delay: 0.7s;
+}
+
+#contactSection {
+  animation-delay: 0.9s;
+}
+
+footer {
+  animation-delay: 1.1s;
+}
+
+/* Match the nav button to your hero call button */
+.btn-outline-success {
+  border-radius: 172.8px !important;
+  border: 1px solid rgba(135, 113, 237, 0.4) !important;
+  background: #0e0c1e !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-outline-success:hover {
+  background: #1a1730 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(135, 113, 237, 0.2);
+}
+
+.btn-outline-success span {
+  color: #f2efff !important;
+}
