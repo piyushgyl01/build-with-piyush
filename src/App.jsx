@@ -1,7 +1,7 @@
 import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import logo from "./images/logo.svg";
 import toggler from "./images/toggler.svg";
