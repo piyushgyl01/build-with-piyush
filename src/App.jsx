@@ -115,6 +115,7 @@ function App() {
               </li>
             </ul>
             <a
+              target="_blank"
               style={{ color: "#d9d0ff" }}
               className="text-decoration-none"
               href="https://calendly.com/piyush_goyal/meet-w-piyush"
@@ -158,6 +159,7 @@ function App() {
               people.
             </p>
             <a
+              target="_blank"
               href="https://calendly.com/piyush_goyal/meet-w-piyush"
               style={{ color: "#f2efff" }}
             >
@@ -426,7 +428,7 @@ function App() {
                 <img src={linkedin} alt="LinkedIn" />
               </a>
               <a
-                href="#" // Replace with your Twitter URL
+                href="https://x.com/piyush_gyl" // Replace with your Twitter URL
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-icon"
