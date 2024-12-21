@@ -406,7 +406,8 @@ function App() {
           <div className="d-flex justify-content-between align-items-center">
             {/* Logo */}
             <div>
-              <img src={logo} alt="Piyush Goyal" className="footer-logo" />
+              <a href="/">
+              <img src={logo} alt="Piyush Goyal" className="footer-logo" /></a>
             </div>
 
             {/* Social Media Icons */}
