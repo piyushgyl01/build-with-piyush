@@ -1,0 +1,348 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #060409 !important;
+}
+
+.softwareAndDesigner {
+  font-family: "Bricolage Grotesque";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 1.6px;
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-heading {
+  font-family: "Bricolage Grotesque";
+  font-size: 4.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.6) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#designAndCode {
+  background: var(
+    --supastella,
+    linear-gradient(90deg, #6549e9 0%, #c8a6eb 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Bricolage Grotesque";
+  font-size: 4.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#remaining {
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.6) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Libre Baskerville";
+  font-size: 4.5rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.hero-text {
+  color: #87928f;
+  font-family: Inter;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+  letter-spacing: -0.2px;
+}
+
+.call {
+  border-radius: 172.8px;
+  border: 1px solid rgba(135, 113, 237, 0.4);
+  background: #0e0c1e;
+  gap: 1rem;
+}
+
+.call a {
+  columns: #f2efff !important;
+  text-decoration: none;
+}
+
+.main button a {
+  text-decoration: none;
+  color: #f2efff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29.16px; /* 163.047% */
+}
+
+.tools-text {
+  color: #87928f;
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+  letter-spacing: -0.2px;
+}
+
+.tools-heading {
+  text-align: center;
+  font-family: "Bricolage Grotesque";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.6) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.obsessed {
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.6) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Libre Baskerville";
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.projects button {
+  padding: 0.5rem 1.5rem;
+  margin: 0.4rem;
+  border-radius: 100px;
+  border: 1px solid rgba(135, 113, 237, 0.25);
+  background: transparent;
+  color: #d9d0ff;
+  font-family: Inter;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.projects button.active {
+  background: var(
+    --supastella,
+    linear-gradient(90deg, #6549e9 0%, #c8a6eb 100%)
+  );
+  border: none;
+  color: #ffffff;
+}
+
+.projects button:not(.active):hover {
+  background: linear-gradient(
+    90deg,
+    rgba(101, 73, 233, 0.4) 0%,
+    rgba(200, 166, 235, 0.4) 100%
+  );
+}
+
+.projects-container {
+  border-radius: 16px;
+  border: 1px solid rgba(135, 113, 237, 0.4);
+  background: url(<path-to-image>) lightgray 0% 0% / 100px 100px repeat,
+    linear-gradient(
+      180deg,
+      rgba(135, 113, 237, 0.06) 0%,
+      rgba(135, 113, 237, 0) 100%
+    ),
+    linear-gradient(0deg, rgba(4, 2, 14, 0.5) 0%, rgba(4, 2, 14, 0.5) 100%),
+    linear-gradient(0deg, #04020e 0%, #04020e 100%), #1a2224;
+}
+
+.project-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 100px;
+  border: 1px solid rgba(135, 113, 237, 0.25);
+  background: transparent;
+  color: #d9d0ff;
+  font-family: Inter;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin: 0.5rem;
+}
+
+.project-btn.active {
+  background: var(
+    --supastella,
+    linear-gradient(90deg, #6549e9 0%, #c8a6eb 100%)
+  );
+  border: none;
+}
+
+.project-btn:not(.active):hover {
+  background: linear-gradient(
+    90deg,
+    rgba(101, 73, 233, 0.4) 0%,
+    rgba(200, 166, 235, 0.4) 100%
+  );
+}
+
+/* ... other styles ... */
+
+.project-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 100px;
+  border: 1px solid rgba(135, 113, 237, 0.25);
+  background: transparent;
+  color: #d9d0ff;
+  font-family: Inter;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin: 0.5rem;
+}
+
+.project-btn.active {
+  background: var(
+    --supastella,
+    linear-gradient(90deg, #6549e9 0%, #c8a6eb 100%)
+  );
+  border: none;
+}
+
+.project-btn:not(.active):hover {
+  background: linear-gradient(
+    90deg,
+    rgba(101, 73, 233, 0.4) 0%,
+    rgba(200, 166, 235, 0.4) 100%
+  );
+}
+
+/* Pagination button styles (using the same styles as project-btn) */
+.project-btn.disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.project-title {
+  font-family: "Bricolage Grotesque";
+  font-size: 2.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  background: linear-gradient(90deg, #d9d0ff 0%, #8771ed 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.view-web {
+  borde-radius: 0.4rem;
+  background: var(
+    --supastella,
+    linear-gradient(90deg, #6549e9 0%, #c8a6eb 100%)
+  );
+  border: none;
+}
+
+.project-description {
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.6) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Libre Baskerville";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+}
+
+.letsTalk {
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.6) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Bricolage Grotesque";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 31.2px */
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.reachOut {
+  background: var(
+    --supastella-2,
+    linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.6) 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Bricolage Grotesque";
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 48.78px */
+}
+
+.reachOutSolo {
+  background: var(
+    --supastella,
+    linear-gradient(90deg, #6549e9 0%, #c8a6eb 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Bricolage Grotesque";
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.contactDetails {
+  color: #fff;
+  font-family: Inter;
+  font-size: 17.861px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 130%; /* 23.219px */
+  letter-spacing: 0.179px;
+}
+
+.footer-logo {
+  width: 6rem; /* Adjust the logo size as needed */
+}
+
+.social-icon {
+  margin-left: 1rem; /* Add spacing between icons */
+  display: flex; /* For vertical alignment of image within the link */
+  align-items: center; /* Vertically center the image */
+}
+
+.social-icon img {
+  width: 2.4rem; /* Adjust icon size as needed */
+  height: 2.4rem;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: url("/src/images/bg.png");
+}
+
+@media (max-width: 600px) {
+  /* Adjust the breakpoint (768px) as needed */
+  .hero-heading,
+  #designAndCode,
+  #remaining {
+    font-size: 2.6rem;
+  }
+}
