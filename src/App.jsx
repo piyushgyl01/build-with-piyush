@@ -227,7 +227,6 @@ function App() {
                 Without them I don't{" "}
                 <span className="reachOutSolo"> feel alive</span>
               </h2>
-
               <p className="tools-text">
                 Though i believe that having better or worse tools doesn't makes
                 any difference. Because if you ask me the one who's wielding
