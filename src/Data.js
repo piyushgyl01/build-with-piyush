@@ -51,38 +51,38 @@ export const projects = [
     // featured: true,
 
     // },
-    // {
-    //   id: 5,
-    //   title: "Work Showcase Design",
-    //   description: `"I designed and animated Design Studios' work
-    //   showcase page, starting with an eye-catching hero
-    //   section to immediately grab visitors' attention."`,
-    //   type: ["Product Design"],
-    //   image:
-    //     "https://github.com/piyushgyl01/images/blob/main/showcase.png?raw=true",
-    //   websiteUrl:
-    //     "https://www.figma.com/design/dgubJXu8P1gKA8vu3fklpa/Blog-Page-by-Piyush-Goyal?node-id=0-1&t=ESdVthF52u2eR98C-1",
-    //   sourceCodeUrl: "https://github.com/username/design-system",
-    //   technologies: ["Web Design", "Figma"],
-    //   featured: true,
+    {
+      id: 5,
+      title: "Work Showcase Design",
+      description: `"I designed and animated Design Studios' work
+      showcase page, starting with an eye-catching hero
+      section to immediately grab visitors' attention."`,
+      type: ["Product Design"],
+      image:
+        "https://github.com/piyushgyl01/images/blob/main/showcase.png?raw=true",
+      websiteUrl:
+        "https://www.figma.com/design/dgubJXu8P1gKA8vu3fklpa/Blog-Page-by-Piyush-Goyal?node-id=0-1&t=ESdVthF52u2eR98C-1",
+      sourceCodeUrl: "https://github.com/username/design-system",
+      technologies: ["Web Design", "Figma"],
+      featured: true,
   
-    // },
-    // {
-    //   id: 6,
-    //   title: "Pocket Pod",
-    //   description: `"I redesigned PocketPod's user
-    //   onboarding flow to simplify AI podcast
-    //   generation."`,
-    //   type: ["Product Design"],
-    //   image:
-    //     "https://github.com/piyushgyl01/images-db/blob/main/pocketPod.png?raw=true",
-    //   websiteUrl:
-    //     "https://www.figma.com/design/017fjZWUhVM8Nugs5a22Ws/PiyushGoyal's-Assignment-Three?node-id=51-567&p=f&t=kNxygiKmyfplXpaw-0",
-    //   sourceCodeUrl: "https://github.com/username/design-system",
-    //   technologies: ["Mobile Design", "Figma"],
-    //   featured: true,
+    },
+    {
+      id: 6,
+      title: "Pocket Pod",
+      description: `"I redesigned PocketPod's user
+      onboarding flow to simplify AI podcast
+      generation."`,
+      type: ["Product Design"],
+      image:
+        "https://github.com/piyushgyl01/images-db/blob/main/pocketPod.png?raw=true",
+      websiteUrl:
+        "https://www.figma.com/design/017fjZWUhVM8Nugs5a22Ws/PiyushGoyal's-Assignment-Three?node-id=51-567&p=f&t=kNxygiKmyfplXpaw-0",
+      sourceCodeUrl: "https://github.com/username/design-system",
+      technologies: ["Mobile Design", "Figma"],
+      featured: true,
   
-    // },
+    },
   
     // Others
     // {
