@@ -17,10 +17,59 @@ import yt from "./images/yt.svg";
 import ig from "./images/ig.svg";
 import mail from "./images/mail.svg";
 
+// Website Preview Modal Component
+const WebsitePreviewModal = ({ isOpen, onClose, websiteUrl, title }) => {
+  if (!isOpen) return null;
+  
+  return (
+    <div className="preview-modal-backdrop" onClick={onClose}>
+      <div className="preview-modal-content" onClick={e => e.stopPropagation()}>
+        <div className="preview-modal-header">
+          <h5>{title}</h5>
+          <button className="close-btn" onClick={onClose}>×</button>
+        </div>
+        <div className="preview-modal-body">
+          <iframe 
+            src={websiteUrl} 
+            title={`Preview of ${title}`} 
+            width="100%" 
+            height="600px"
+            className="preview-iframe"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
 function App() {
   const [activeType, setActiveType] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 5;
+  const [previewModal, setPreviewModal] = useState({
+    isOpen: false,
+    websiteUrl: "",
+    title: ""
+  });
+
+  const openPreview = (url, title, projectType) => {
+    // Only open preview for Web Development projects
+    if (projectType.includes("Web Development")) {
+      setPreviewModal({
+        isOpen: true,
+        websiteUrl: url,
+        title: title
+      });
+    }
+  };
+
+  const closePreview = () => {
+    setPreviewModal({
+      isOpen: false,
+      websiteUrl: "",
+      title: ""
+    });
+  };
 
   const projectTypes = [
     "All",
@@ -278,14 +327,24 @@ function App() {
                       }}
                     >
                       <div className="row g-0">
-                        <div className="col-md-6">
-                          <a target="_blank" href={project.websiteUrl}>
+                        <div className="col-md-6 position-relative">
+                          <div className="project-image-container">
                             <img
                               src={project.image}
                               className="img-fluid rounded-start"
                               alt={project.title}
-                            />{" "}
-                          </a>
+                            />
+                            {project.type.includes("Web Development") && (
+                              <div className="image-overlay">
+                                <button
+                                  onClick={() => openPreview(project.websiteUrl, project.title, project.type)}
+                                  className="preview-hover-btn"
+                                >
+                                  Preview
+                                </button>
+                              </div>
+                            )}
+                          </div>
                         </div>
                         <div className="col-md-6">
                           <div className="card-body">
@@ -320,31 +379,46 @@ function App() {
                                   View Work
                                 </a>
                               ) : (
-                                <a
-                                  target="_blank"
-                                  href={project.websiteUrl}
-                                  className="btn btn-primary me-2 view-web"
-                                >
-                                  Visit Website
-                                </a>
+                                <>
+                                  <a
+                                    target="_blank"
+                                    href={project.websiteUrl}
+                                    className="btn btn-primary me-2 view-web"
+                                  >
+                                    Visit Build
+                                  </a>
+                                  {project.sourceCodeUrl &&
+                                    project.sourceCodeUrl.frontend && (
+                                      <a
+                                        target="_blank"
+                                        href={project.sourceCodeUrl.frontend}
+                                        className="btn btn-secondary me-2"
+                                        style={{
+                                          backgroundColor: "transparent",
+                                          borderColor: "#d9d0ff",
+                                          color: "#d9d0ff",
+                                        }}
+                                      >
+                                        Frontend Source Code
+                                      </a>
+                                    )}
+                                  {project.sourceCodeUrl &&
+                                    project.sourceCodeUrl.backend && (
+                                      <a
+                                        target="_blank"
+                                        href={project.sourceCodeUrl.backend}
+                                        className="btn btn-secondary"
+                                        style={{
+                                          backgroundColor: "transparent",
+                                          borderColor: "#d9d0ff",
+                                          color: "#d9d0ff",
+                                        }}
+                                      >
+                                        Backend Source Code
+                                      </a>
+                                    )}
+                                </>
                               )}
-                              {project.type.includes("Product Design") ||
-                              project.type.includes("Others") ? (
-                                ""
-                              ) : (
-                                <a
-                                  target="_blank"
-                                  href={project.sourceCodeUrl}
-                                  className="btn btn-secondary"
-                                  style={{
-                                    backgroundColor: "transparent",
-                                    borderColor: "#d9d0ff",
-                                    color: "#d9d0ff",
-                                  }}
-                                >
-                                  View Source
-                                </a>
-                              )}{" "}
                             </div>
                           </div>
                         </div>
@@ -385,7 +459,7 @@ function App() {
         <div className="container py-4">
           <div className="row">
             <div className="col-md-12 text-center">
-              <p className="letsTalk">Let’s talk</p>
+              <p className="letsTalk">Let's talk</p>
               <h2 className="reachOut mb-5 pb-3">
                 Feel free to <span className="reachOutSolo"> reach out</span> to
                 me on
@@ -450,7 +524,8 @@ function App() {
             {/* Logo */}
             <div>
               <a href="#hero">
-              <img src={logo} alt="Piyush Goyal" className="footer-logo" /></a>
+                <img src={logo} alt="Piyush Goyal" className="footer-logo" />
+              </a>
             </div>
 
             {/* Social Media Icons */}
@@ -472,7 +547,7 @@ function App() {
                 <img src={linkedin} alt="LinkedIn" />
               </a>
               <a
-                href="https://x.com/piyush_gyl" // Replace with your Twitter URL
+                href="https://x.com/piyush_gyl" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-icon"
@@ -488,7 +563,7 @@ function App() {
                 <img src={ig} alt="Instagram" />
               </a>
               <a
-                href="https://www.youtube.com/@piyushgoyal30/videos" // Replace with your YouTube URL
+                href="https://www.youtube.com/@piyushgoyal30/videos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-icon"
@@ -499,6 +574,14 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* Website Preview Modal */}
+      <WebsitePreviewModal
+        isOpen={previewModal.isOpen}
+        onClose={closePreview}
+        websiteUrl={previewModal.websiteUrl}
+        title={previewModal.title}
+      />
     </>
   );
 }

@@ -347,6 +347,59 @@ body {
   }
 }
 
+/* Preview Modal Styles */
+.preview-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(4, 2, 14, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.preview-modal-content {
+  width: 90%;
+  max-width: 1200px;
+  background: #0E0C1E;
+  border: 1px solid rgba(135, 113, 237, 0.25);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.preview-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(135, 113, 237, 0.25);
+  color: #d9d0ff;
+}
+
+.preview-modal-header h5 {
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #d9d0ff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.preview-modal-body {
+  padding: 0;
+}
+
+.preview-iframe {
+  border: none;
+  display: block;
+}
+
 /* Sophisticated Animation Keyframes */
 @keyframes gradientFlow {
   0% {
@@ -634,4 +687,286 @@ footer {
 
 .btn-outline-success span {
   color: #f2efff !important;
+}
+
+/* Add these styles to your style.css file */
+
+.project-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.25rem 0 0 0.25rem;
+  height: 100%;
+}
+
+.project-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 8, 20, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.preview-hover-btn {
+  background: rgba(135, 113, 237, 0.4);
+  border: 1px solid #8771ed;
+  color: #ffffff;
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.preview-hover-btn:hover {
+  background: rgba(135, 113, 237, 0.6);
+  transform: scale(1.05);
+}
+
+/* Ensure modal appears above everything else */
+.preview-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.preview-modal-content {
+  background-color: #0E0C1E;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 90vh;
+  overflow: hidden;
+  border: 1px solid rgba(135, 113, 237, 0.25);
+}
+
+.preview-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(135, 113, 237, 0.25);
+}
+
+.preview-modal-header h5 {
+  color: #d9d0ff;
+  margin: 0;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #d9d0ff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+.preview-modal-body {
+  padding: 0;
+  height: calc(90vh - 4rem);
+}
+
+.preview-iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+/* Increase margin between project image and text */
+.card .row.g-0 {
+  margin: 0; /* Reset any existing margin */
+}
+
+.card .card-body {
+  padding-left: 2.2rem; /* Increase left padding of the card body */
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+  .card .card-body {
+    padding-left: 1.25rem; /* Less padding on smaller screens */
+    padding-top: 1.5rem; /* Add some top padding for when image is above text on mobile */
+  }
+}
+
+/* Website preview styles */
+.project-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.25rem 0 0 0.25rem;
+  height: 100%;
+}
+
+.website-preview-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  overflow: hidden;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.website-preview-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  transform: scale(1);
+  transform-origin: 0 0;
+  pointer-events: none; /* Prevents interaction with the iframe until preview button is clicked */
+}
+
+.iframe-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 5;
+}
+
+.fallback-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hover effect */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 8, 20, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.project-image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.preview-hover-btn {
+  background: rgba(135, 113, 237, 0.4);
+  border: 1px solid #8771ed;
+  color: #ffffff;
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.preview-hover-btn:hover {
+  background: rgba(135, 113, 237, 0.6);
+  transform: scale(1.05);
+}
+
+/* Modal styles */
+.preview-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.preview-modal-content {
+  background-color: #0E0C1E;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 90vh;
+  overflow: hidden;
+  border: 1px solid rgba(135, 113, 237, 0.25);
+}
+
+.preview-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(135, 113, 237, 0.25);
+}
+
+.preview-modal-header h5 {
+  color: #d9d0ff;
+  margin: 0;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #d9d0ff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+.preview-modal-body {
+  padding: 0;
+  height: calc(90vh - 4rem);
+}
+
+.preview-iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+/* Loading indicator */
+.website-preview-wrapper::before {
+  content: "Loading preview...";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #d9d0ff;
+  z-index: 4;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.website-preview-iframe:not([src=""]) + .website-preview-wrapper::before {
+  display: none;
 }
