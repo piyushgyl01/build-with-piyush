@@ -53,7 +53,6 @@ function App() {
   });
 
   const openPreview = (url, title, projectType) => {
-    // Only open preview for Web Development projects
     if (projectType.includes("Web Development")) {
       setPreviewModal({
         isOpen: true,
@@ -115,7 +114,6 @@ function App() {
       });
     }, observerOptions);
 
-    // Target elements for animation
     const elements = document.querySelectorAll(`
       .tools-heading, 
       .tools-text, 
@@ -521,14 +519,12 @@ function App() {
       <footer className="py-3">
         <div className="container">
           <div className="d-flex justify-content-between align-items-center">
-            {/* Logo */}
             <div>
               <a href="#hero">
                 <img src={logo} alt="Piyush Goyal" className="footer-logo" />
               </a>
             </div>
 
-            {/* Social Media Icons */}
             <div className="d-flex">
               <a
                 href="https://github.com/piyushgyl01"

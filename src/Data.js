@@ -1,5 +1,4 @@
 export const projects = [
-  // Web Development and Mobile Development Projects
   {
     id: 1,
     title: "Picslify | Preserve Your Precious Memories",
@@ -35,7 +34,7 @@ export const projects = [
     title: "CRMABLES | A CRM App",
     description:
       "CRMABLES is a streamlined CRM app for managing leads and sales agents. Built with React and Express, it offers both web and mobile interfaces for tracking customer relationships from anywhere.",
-    type: ["Web Development", "Mobile Development"],
+    type: ["Web Development"],
     image: "https://github.com/piyushgyl01/images-db/blob/main/crm.png?raw=true",
     websiteUrl: "https://crmables-frontend.vercel.app/",
     sourceCodeUrl: {
