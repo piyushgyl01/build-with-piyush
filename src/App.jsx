@@ -381,7 +381,7 @@ function App() {
                                   <a
                                     target="_blank"
                                     href={project.websiteUrl}
-                                    className="btn btn-primary me-2 view-web"
+                                    className="btn btn-primary m-2 view-web"
                                   >
                                     Visit Build
                                   </a>
@@ -390,7 +390,7 @@ function App() {
                                       <a
                                         target="_blank"
                                         href={project.sourceCodeUrl.frontend}
-                                        className="btn btn-secondary me-2"
+                                        className="btn btn-secondary m-2"
                                         style={{
                                           backgroundColor: "transparent",
                                           borderColor: "#d9d0ff",
@@ -405,7 +405,7 @@ function App() {
                                       <a
                                         target="_blank"
                                         href={project.sourceCodeUrl.backend}
-                                        className="btn btn-secondary"
+                                        className="btn btn-secondary m-2"
                                         style={{
                                           backgroundColor: "transparent",
                                           borderColor: "#d9d0ff",
